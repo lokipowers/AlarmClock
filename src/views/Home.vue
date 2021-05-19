@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <nav-bar />
+    <div class="next-alarm">
+      <template v-if="nextAlarm !== null">
+        <font-awesome-icon :icon="bell" />
+        {{ nextAlarm }}
+      </template>
+      <div class="no-alarm-set">No alarm set</div>
+    </div>
     <clock />
   </div>
 </template>
@@ -15,18 +21,23 @@ export default {
   components: {
     Clock,
     NavBar
+  },
+  data(){
+    return{
+      nextAlarm: null
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
 
-#nav{
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
+.next-alarm{
+  margin-top:30px;
+}
 
+.time{
+  margin-top:30px;
 }
 
 </style>

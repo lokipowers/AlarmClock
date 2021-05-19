@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+  cursor: none;
+}
 body{
   background:black;
   color:white;

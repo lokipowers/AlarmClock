@@ -14,7 +14,7 @@ export default {
       flashSep: false,
       showSep: true,
       sep: ':',
-      currentHour: this.$moment().format('h'),
+      currentHour: this.$moment().format('H'),
       currentMinute: this.$moment().format('mm'),
       //currentSecond: this.$moment().format('ss'),
       clockFont: 'digital'
